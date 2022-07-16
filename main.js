@@ -70,8 +70,6 @@ function showList()
         li.id = key
         let span = document.createElement('span')
         let content = document.createTextNode(data[key].text)
-        // let allNum=document.createTextNode(data[key].length)
-        console.log(data);
         let img = document.createElement('img')
         img.src = "./delete.png"
         img.className = 'del-icon'
@@ -79,7 +77,6 @@ function showList()
         span.addEventListener('click', revertDelete);
         // 插入节点
         span.appendChild(content)
-        // i.appendChild(allNum)
         li.appendChild(span)
         li.appendChild(img)
         if (data[key].finished) {
